@@ -7,7 +7,7 @@ function puts_required_apt {
 }
 function puts_required_yum {
     echo "Install the following packages"
-    echo "sudo yum install -y make gcc openssl-devel readline-devel autoconf zlib-devel"
+    echo "sudo yum install -y make gcc openssl-devel bzip2-devel readline-devel autoconf zlib-devel sqlite-devel"
 }
 
 
