@@ -31,3 +31,15 @@ else
     echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> $HOME/.bashrc
     echo 'eval "$(pyenv init -)"' >> $HOME/.bashrc
 fi
+
+if [ -e $PYENV_HOME/plugins ]; then
+    echo "Exist $PYENV_HOME/plugins"
+else
+    mkdir -p $PYENV_HOME/plugins
+fi
+    
+if [ -e $PYENV_HOME/plubins/pyenv-update ]; then
+    echo "Exist $PYENV_HOME/pyenv-update"
+else
+    git clone https://github.com/pyenv/pyenv-update.git $PYENV_HOME/plugins/pyenv-update
+fi
